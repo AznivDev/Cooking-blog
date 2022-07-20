@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Homework 2</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./style.css">
+
+    </head>
+    <body>
+        <!-- Implement using HTML -->
+        <div>
+            <p>This is  <b>bold text.</b></p>
+            <p>This is <strong>strongly important text.</strong></p>
+            <p>This is <i>italic text.</i></p>
+            <p>This is <em>emphasized text.</em></p>
+            <p>This is <mark>highlighted text.</mark></p>
+            <p>This is <code>computer code.</code></p>
+            <p>This is <small>smaller text.</small></p>
+            <p>This is <sub>subscript</sub> and <sup>superscript</sup> text.</p>
+            <p>This is <del>deleted text.</del></p>
+            <p>This is <u>inserted text</u></p>
+            <p>This is <b>bold text.</b></p>
+        </div>
+
+        <!-- Phone container -->
+        <div class="phone">
+            <h1>Phone info</h1>
+
+            <label for="battery">Battery</label>
+            <progress id="battery" value="15" max="100"></progress>
+            <label for="disk-usage">Disk usage</label>
+            <progress id="disk-usage" value="65" max="100"></progress>
+            <label for="network">Network</label>
+            <progress id="network" value="95" max="100"></progress>
+            <br><br>
+        </div>
+        
+        <!-- User registration container-->
+       <form>
+            <fieldset class="first-inputs">
+                <legend>User registration</legend>
+                <label>First name: <input type="text" class="input"></label>
+                <label>Last name: <input type="text" class="input"></label>
+                <label>Email: <input type="email" class="input"></label>
+                <label>Passwort: <input type="passwort" class="input"></label>
+                <label>Repead passwort: <input type="passwort" class="input"></label>
+                <label>Birthday: <input type="date" class="input"></label>
+                <label>Upload you passwort: <input type="file" class="input"></label>
+                <label>Favorite color: <input type="color"></label>
+                <form>
+                    <fieldset class="gender-inputs">
+                        <legend>Gender</legend>
+                        <label><input type="radio" name="gender"> Mail</label>
+                        <label><input type="radio" name="gender"> Femail</label>
+                    </fieldset>
+                </form>
+                <label>About yourself: <textarea></textarea></label>
+                <label>
+                    <input type="checkbox"> Aggre with 
+                    <a href="https://termify.io/terms-and-conditions-generator?gclid=Cj0KCQjwidSWBhDdARIsAIoTVb1rVvAAHODMnF0jFW2PW9UxXMBh9st0PQJ83npmGrdknfQDogqTl-MaAsuBEALw_wcB">
+                        Terms and conditions</a>
+                </label>
+
+                <button type="submit">Register</button>
+            </fieldset>
+       </form>
+        
+       <a href="./info.html" target="_blank"><img src="./images/nature.jpg" alt="nature"></a>
+        
+    </body>
+</html>
