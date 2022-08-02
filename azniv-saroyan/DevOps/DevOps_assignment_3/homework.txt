@@ -1,0 +1,78 @@
+                  Assignment 1
+                  
+. sudo su
+  useradd jane
+. userdel jane
+. useradd ani
+. grep '/home/ani' /etc/passwd
+. userdel ani
+. useradd aram
+. variable=/home/azniv
+  usermod -d $variable aram
+. grep aram  /etc/passwd
+. groupadd -g 1500 researcher
+. usermod -g researcher aram
+. usermod -G sudo aram 
+. passwd aram
+          2 անգամ մուտքագրել եմ նույն գաղտնաբառը
+. checked
+. id aram
+. userdel -r aram 
+
+              
+                   Assignment 2
+
+. touch test-file-assignment
+. mkdir test-directory-assignment
+. ll test-file-assignment >> output-file
+. ll test-directory-assignment  >> output-directory
+. sudo useradd test
+. sudo groupadd researcher
+. sudo chown test test-file-assignment
+. sudo chown .researcher test-directory-assignment
+. chmod -670
+. chmod -077
+. ll test-file-assignment >> output-file
+. ll test-directory-assignment >> outout-directory
+. sudo userdel -r test
+. sudo groupdel researcher
+. ll test-file-assignment >> output-file
+. ll test-directory-assignment >> outout-directory
+
+
+
+                    Assignment 3
+                    
+.  sudo apt install nginx
+.  sudo systemctl status nginx
+   curl localhost
+   sudo su
+   cd /etc/nginx/
+   cd sites-enabled/
+   unlink default
+   cd ..
+   cd /var/www/html 
+.  mkdir html-css
+   cd html-css
+   nano index.html
+   nano style.css
+.  systemctl reload nginx
+   cd ../../..
+.  cd /etc/hosts
+   cd ..
+.  systemctl stop nginx
+.  apt remove nginx
+.  cd /var/www/html
+   rm index.html
+   rm style.css
+.  cd ../../..
+   nano /etc/hosts
+
+
+
+
+ 
+
+
+ 
+

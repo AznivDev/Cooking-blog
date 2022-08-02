@@ -1,0 +1,62 @@
+mkdir DevOps 
+cd DevOps
+mkdir homework-1
+cd homework-1
+touch homework.txt
+touch in-class.txt
+add .
+git commit -m "add DevOps/homework-1"
+git push origin master
+
+git branch lesson-2
+git checkout lesson-2
+mkdir homework-2
+git add homework-2
+git commit -m "test"
+git push --set-upstream origin lesson-2
+
+cd homework-2
+
+echo "1" >> file1
+git add file1
+git commit -m "file1"
+git push
+
+echo "2" >> file2
+git add file2
+git commit -m "add file2"
+git push
+
+echo "3" >> file3
+git add file3
+git commit -m "add file3"
+git push
+
+echo "4" >> file4
+git add file4
+git commit -m "add file4"
+git push
+
+git revert df1c913
+git add .
+vim -revert file1
+git push
+
+git revert 6c15be0
+git add .
+vim -revert file2
+git push
+
+touch history-2.txt
+
+git add .
+git commit -m "add history-2.txt"
+git push
+
+git add .
+add text history-2.txt
+git push
+
+
+
+

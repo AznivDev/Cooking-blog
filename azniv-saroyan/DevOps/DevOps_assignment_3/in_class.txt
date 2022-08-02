@@ -1,0 +1,30 @@
+       Assignment 1
+
+. sudo su
+. sudo su
+  su azniv
+
+
+      Assignment 2
+      
+. sudo su
+  cp -ar /etc/shadow /tmp
+. usermod -l 1500 azniv  
+        (-l ավելի անվտանգ է, քան ֊u, քանի որ ֆայլերը չեն կորչում)
+. sudo passwd root
+  2 անգամ մուտքագրել եմ նույն գաղտնաբառը
+. sudo su 
+  diff /tmp/shadow /etc/shadow                        
+ 
+ 
+     Assignment 3
+     
+. sudo su
+  cp -ar /etc/passwd /etc/group /tmp
+. sudo useradd jane
+. sudo usermod -c 'She is a Jane' jane
+. sudo groupadd development
+  sudo usermod -G development jane
+. sudo diff -r /tmp/group /tmp/passwd
+. sudo groupdel development
+. sudo diff -r /tmp/group /tmp/passwd
