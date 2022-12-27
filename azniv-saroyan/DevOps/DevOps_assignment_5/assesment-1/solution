@@ -1,0 +1,21 @@
+echo -n "Writ file's numes "
+read base1 base2
+mkdir storage
+cp -r $base1 $base2  storage
+echo "Done!"
+ctrlc=0
+
+function trap_ctrlc {
+	let ctrlc++
+	if [[ $ctrlc == 1  ]]; then
+		rm -r storage	
+	 exit
+	fi
+}
+
+trap trap_ctrlc SIGINT
+
+while true
+	do echo Sliping...
+	sleep 5
+done

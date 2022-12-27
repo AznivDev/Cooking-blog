@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <headd>
+        <meta charset="UTF-8">
+        <title>JavaScript assignment 3</title>
+        <link rel="stylesheet" href="./style.css"></link>
+        <script src="https://kit.fontawesome.com/95e706994e.js" crossorigin="anonymous"></script>
+    </headd>
+    <body>
+        <!--Percentage calculator-->
+
+        <form  id="formCalcPercentage" name="form" onsubmit="return calcPrecentage()">
+            <div class="formLeftContainer">
+                <p>What is </p>
+                <input type="text" placeholder="0" id="calcPrecentageInputOne">
+                <p>% of</p>
+                <input type="text" placeholder="0" id="calcPrecentageInputTwo">
+                <p>?</p>
+            </div>
+            <div class="formRightContainer">
+                <input type="submit" class="submit" value="CALCULATE" id = "submit">
+                <input type="text" placeholder="0" id="calcPrecentageResult">
+            </div>
+        </form>
+
+        <form  id="formCalcPercentageButtom" name="form" onsubmit="return calcPrecentageBottom()">
+            <div class="formLeftContainer">
+                <input type="text" placeholder="0" id="calcPrecentageBottomInputOne">
+                <p>is what percentof</p>
+                <input type="text" placeholder="0" id="calcPrecentageBottomInputTwo">
+                <p>?</p>
+            </div>
+            <div class="formRightContainer">
+                <input type="submit" class="submit" value="CALCULATE" id = "submitBottom">
+                <input type="text" placeholder="0" id="calcPrecentageBottomResult">
+                <p>%</p>
+            </div>
+        </form>
+
+        <script src="./main.js"></script>
+    </body>
+</html>

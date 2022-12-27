@@ -1,0 +1,20 @@
+{
+  "name": "qa-software-testing-fundamentals_assignment_2",
+  "version": "1.0.0",
+  "description": "tesing",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Azniv",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.0.2"
+  },
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}

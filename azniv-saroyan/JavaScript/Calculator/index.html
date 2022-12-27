@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="./style.css"></link>
+    </head>
+    <body>
+        <form name="form" id="calculiatorForm" >
+            <div>
+                <input type="text" id="result">
+            </div>
+            <div>
+                <input type="button" value="C" onclick="return removeAllInput()">
+                <input type="button" value="<-" onclick="return removeOneInput()">
+                <input type="button" value="=" onclick="return resultOfCalculate()">
+            </div>
+            <div>
+                <input type="button" value="1" name="addValue">
+                <input type="button" value="2" name="addValue">
+                <input type="button" value="3" name="addValue">
+            </div>
+            <div>
+                <input type="button" value="4" name="addValue">
+                <input type="button" value="5" name="addValue">
+                <input type="button" value="6" name="addValue">
+            </div>
+            <div>
+                <input type="button" value="7" name="addValue">
+                <input type="button" value="8" name="addValue">
+                <input type="button" value="9" name="addValue">
+            </div>
+            <div>
+                <input type="button" value=" + " name="addValue">
+                <input type="button" value="0" name="addValue">
+                <input type="button" value=" - " name="addValue">
+            </div>
+            <div>
+                <input type="button" value=" * " name="addValue">
+                <input type="button" value=" / " name="addValue">
+                <input type="button" value=" % " name="addValue">
+            </div>
+        </form>
+
+        <script src="./main.js"></script>
+    </body>
+</html>

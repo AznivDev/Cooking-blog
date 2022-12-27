@@ -1,0 +1,15 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#coronavirousInfoTable {
+    width: 100%;
+}
+#coronavirousInfoTable tr{
+    width: 100%;
+}
+#coronavirousInfoTable th, td {
+    width: 200px;
+    height: 50px;
+}

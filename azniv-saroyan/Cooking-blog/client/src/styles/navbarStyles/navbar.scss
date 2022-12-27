@@ -1,0 +1,177 @@
+@import "../mixins.scss";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+    .navbar {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        z-index: 100;
+        top: 0;
+        background-color: $mainColor;
+        box-shadow: 0px 0px 5px 0px #000;
+        .logo {
+            width: 15%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding-left: 60px;
+            @media screen and (max-width: 1120px){
+                padding-left: 40px;
+            }
+            @media screen and (max-width: 945px) {
+                padding-left: 25px;
+            }
+            @media screen and (max-width: 565px) {
+                width: 25%;
+            }
+            @media screen and (max-width: 350px) {
+                padding-left: 10px;
+            }
+            .logoImage {
+                height: 60px;
+                border-radius: 50px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }    
+        }
+        //hidden buttons
+        .navbarMenu {
+            margin-right: 30px;
+            color: $textsColor;
+            font-family: $fontFamilyTexts;
+            display: none;
+            @media screen and (max-width: 900px) {
+                display: block;
+            }
+            @media screen and (max-width: 350px) {
+                margin-right: 10px;
+            }
+        }
+        .navbarList {
+            width: 70%;
+            @include rowCenter;
+            gap: 25px;
+            font-size: 20px;
+            font-family: $fontFamilyTexts;
+            font-weight: bold;  
+            .navbarItem {
+                @include rowCenter;
+                text-decoration: none;                 
+            }          
+            @media screen and (max-width: 1223px) {
+                width: 60%;
+            }
+            @media screen and (max-width: 1060px) {
+                gap: 15px;
+            }
+            // opening list
+            @media screen and (max-width: 900px) {
+                position: absolute;
+                display: flex;
+                flex-direction: start;
+                flex-direction: column;
+                align-items: center;
+                top: 70px;
+                right: 0px;
+                width: 40%;
+                display: none;
+                opacity: 0.95;
+                transition: all 5s ease;
+                &--active {
+                    display: block;
+                    transition: all 5s ease;
+                }
+                .navbarItem {
+                    width: 100%; 
+                    border-top: 1px solid #fff;               
+                } 
+            }
+            @media screen and (max-width: 775px) {
+                width: 50%;
+            }
+            @media screen and (max-width: 550px) {
+                width: 60%;
+            }
+            @media screen and (max-width: 480px) {
+                width: 80%;
+            }
+            @media screen and (max-width: 350px) {
+                width: 100%;
+            }
+            .navbarText { 
+                color: $textsColor; 
+                transition-duration: 1s;    
+                &:hover {
+                    cursor: pointer;
+                    color: $textHoverColor;
+                    transition-duration: 1s; 
+                }  
+                @media screen and (max-width: 900px) {
+                    width: 100%;
+                    @include rowCenter;
+                    background-color: $mainColor; 
+                    height: 50px;
+                }
+            }
+        } 
+        //login, register buttons
+        .navbarButtons {
+            width: 20%;
+            display: flex;
+            justify-content: end;
+            gap: 30px;
+            .loginBtn, .registrationBtn {
+                text-decoration: none;
+                @include rowCenter;
+                color: $textsColor;
+                font-size: 20px;
+                cursor: pointer;
+                font-family: $fontFamilyTexts;
+                transition-duration: 1s;
+                &:hover {
+                    cursor: pointer;
+                    color: $textHoverColor;
+                    transition-duration: 1s;
+                }
+                @media screen and (max-width: 350px){
+                    gap: 20px;
+                }
+            }
+            @media screen and (max-width: 1223px) {
+                width: 25%;
+                gap: 25px;
+            }
+            @media screen and (max-width: 1060px) {
+                gap: 15px;
+            }
+            @media screen and (max-width: 900px) {
+                margin-right: 20px;
+                margin-left: auto;
+            }
+            @media screen and (max-width: 420px) {
+                gap: 5px;
+                margin-right: 0px;
+            }
+            .registrationBtn {
+                padding-right: 60px;
+                @media screen and (max-width: 1120px){
+                    padding-right: 40px;
+                }
+                @media screen and (max-width: 945px) {
+                    padding-right: 25px;
+                }
+                @media screen and (max-width: 350px) {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+  

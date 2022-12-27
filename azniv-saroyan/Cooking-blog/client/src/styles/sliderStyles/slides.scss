@@ -1,0 +1,103 @@
+@import "../_variables.scss";
+@import "../mixins.scss";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+    .sliderContiner {
+        height: 70vh;
+        width: 90%;
+        position: relative;
+        margin: 0px;
+        overflow: hidden;
+        object-fit: cover;
+        .slides {
+            height: 100vh;
+            position: relative;
+        }
+        .slideImage {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            object-fit: cover;
+            @media screen and (max-width: 763px){
+                height: 60vh;
+            }
+            @media screen and (max-width: 530px){
+                height: 50vh;
+            }
+            @media screen and (max-width: 440px){
+                height: 40vh;
+            }
+            @media screen and (max-width: 345px){
+                height: 30vh;
+            }
+        }
+        .active {
+            width: 100%;
+        }
+        .inactive {
+            width: 0px;
+        }
+        .allDots {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            top: 63vh;
+            justify-content: center;
+            z-index: 90;
+            @media screen and (max-width: 763px){
+                top: 53vh;
+            }
+            @media screen and (max-width: 530px){
+                top: 43vh;
+            }
+            @media screen and (max-width: 440px){
+                top: 33vh;
+            }
+            @media screen and (max-width: 345px){
+                top: 23vh;
+            }
+        }
+        .dotsContent {
+            width: 100%;
+        }
+        .dot {
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            margin: 0px 3px;
+            opacity: 0.6;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: $textsColor;
+            @media screen and (max-width: 440px){
+                height: 18px;
+                width: 18px;
+            }
+        } 
+        .activeDot {
+            background-color: $mainColor;
+            transition: 1s;
+        }
+        @media screen and (max-width: 763px){
+            height: 60vh;
+        }
+        @media screen and (max-width: 530px){
+            height: 50vh;
+            width: 95%;
+        }
+        @media screen and (max-width: 440px){
+            height: 40vh;
+        }
+        @media screen and (max-width: 345px){
+            height: 30vh;
+        }
+    }
+}
+ 
+
+
+
+ 

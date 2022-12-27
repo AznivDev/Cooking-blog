@@ -1,0 +1,67 @@
+body {
+    background-color: antiquewhite;
+   }
+   
+   .container {
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-template-rows: 1fr 1fr 1fr;
+       width: 500px;
+       height: 500px;
+   }
+   
+   .tile{
+       border: 1px solid black;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 60px;
+       cursor: pointer;
+   }
+   
+   .wrapper {
+       width: 100wh;
+       height: 100vh;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
+   
+   #reset, #info {
+       width: 120px;
+       height: 70px;
+       border-radius: 8px;
+       background-color: blanchedalmond;
+       color: #000;
+       font-size: 18px;
+       font-weight: bold;
+   }
+   
+   #reset {
+     margin-top: 10px;
+   }
+
+   .usersBoards {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+   }
+   
+   .usersBoards div {
+        display:flex;
+        flex-direction: column;
+        margin: 20px 0px;
+   }
+
+   .usersBoards div input {
+        background-color: blanchedalmond;
+        text-align: center;
+        border: none;
+        outline: none;
+        font-size: 16px;
+   }
+
+   .player-name {
+        cursor: text;
+   }

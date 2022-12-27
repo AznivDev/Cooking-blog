@@ -1,0 +1,283 @@
+* { 
+    margin: 0px; 
+    padding: 0px; 
+    box-sizing: border-box;  
+    font-family: 'Satoshi';
+} 
+:root {
+     --header-font-size: 18px; 
+     --header-color: #000; 
+     --containers-padding: 0px 100px;
+     
+}
+
+
+.header-container { 
+    position: relative; 
+    background-color: #FFF;
+    padding: var(--containers-padding); 
+} 
+
+/*header navbar containe*/ 
+.header-tocontainer-top {
+    background-color: #EFF0F6;
+    margin-top: 5px;
+    box-shadow: 0px 0px 3px 0px gray;
+    margin-bottom: 10px;
+}
+
+.header-tocontainer-top, .header-container-buttom { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    height: 50px; 
+    padding: 0px 100px;  
+} 
+
+.header-container-buttom  {
+    background-color: #FFF;
+}
+
+.nike, .nike-buttom {
+    width: 70px;
+    height: 70px;
+    color: #000;
+}
+
+.nike {
+    display: none;
+}
+
+.login-register{ 
+    font-size: 30px; 
+    display: flex;
+    justify-content: end;
+    font-size: var(--header-font-size);
+    color: #000;
+} 
+
+.navbar, .navbar-buttom {
+    width: 100%;
+    list-style-type: none; 
+    display: flex; 
+}
+
+.navbar li, .navbar-buttom li{ 
+    margin: 0px 25px; 
+} 
+
+.navbar li a, .navbar-buttom li a { 
+    text-decoration: none; 
+    font-size: var(--header-font-size);
+    color: var(--header-color);
+} 
+
+.guids {
+    padding-left: 0px;
+}
+#burger-menu { 
+    font-size: 40px;
+    color: #D9D9D9;
+    display: none; 
+} 
+
+#saerch, #page {
+    font-size: 30px;
+}
+
+#saerch {
+    margin-right: 10px;
+}
+
+.sale-base {
+    position: relative;
+}
+.sale {
+    position: absolute;
+    color: #fff;
+    background-color: red;
+    border-radius: 100px;
+    padding: 2px 2px;
+    font-size: 12px;
+    margin-top: -15px;
+    margin-left: -10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 35px;
+}
+ /* main */
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: var(--containers-padding);
+}
+
+.main-top {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main-big-text, .main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.main-big-text {
+    font-size: 50px;
+    color: #241987
+}
+
+.main-text  {
+    font-size: 14px;
+    margin: 10px 0px;
+}
+
+.images-container {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    border: 1px solid #000;
+    margin: 10px 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.images-block image{
+    position: relative;
+}
+
+.images-block .text{
+    position: absolute;
+    margin-top: -200px;
+    margin-left: 80px;
+    color:#FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+/*main-buttom container*/
+.main-buttom{
+    display: flex;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.main-buttom-text {
+    display: flex;
+    flex-direction: column;
+    flex-direction: start;
+    margin: 30px 0px;
+}
+
+.main-buttom-text p{
+    display: flex;
+    flex-direction: start;
+    width: 40%;
+    line-height: 40px;
+    
+}
+.main-buttom-title{
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+.main-buttom-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-buttom-text button{
+    width: 130px;
+    height: 40px;
+    background-color: #000;
+    color: #FFF;
+    margin-right: 100px;
+    margin-top: 10px;
+}
+
+footer {
+    height:  250px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+    margin-top: 200px;
+    color: #FFF;
+}
+
+footer p, footer div{
+    width: 100%;
+    text-align: end;
+    align-items: center;
+}
+
+.social-media i {
+    margin: 0 10px;
+}
+
+.social-media {
+    margin: 20px 0px;
+}
+
+@media only screen and (max-width: 630px) {
+
+    .header-tocontainer-top {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+
+    .header-container-buttom {
+        display: none;   
+    }
+
+    #burger-menu, .nike  {
+        display: block;
+    }
+
+    .navbar, .login-register{
+        display: none;
+    }
+
+    .header-container {
+       padding: 0px;
+    }
+
+    .images-container  {
+        border: 0px;
+    }
+
+    .main-buttom{ 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-buttom-text p{
+        width: 100%;
+    }
+
+    footer  {
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        margin-right: 0px;  
+    }
+
+    footer p, footer div{
+        text-align: center;
+        align-items: center;
+        margin-right: 0px;
+    }
+
+   
+}

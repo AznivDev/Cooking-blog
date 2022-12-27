@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.2vw;
+    margin: 0px;   
+}
+
+.topParagraph {
+    text-align: center;
+}
+
+/* title styling */
+.title {
+    font-family: Merriweather, serif;
+    font-size: 4vw;
+    color: #1976d2;
+    margin: 30px;
+    text-shadow: 2px 2px #243148;
+}
+
+/* all paragraph styling */
+p {
+    margin: 20px;
+    text-align: justify;
+}
+
+.paragraphWithIframe{
+    display: inline-block;
+    align-items: center;
+    margin-left: 70px;
+    vertical-align: middle;
+}
+
+.paragraphWithIframe p {
+    display: inline-block;
+    width: 30%;
+    margin-top: 0;
+    vertical-align: top;
+}
+
+.paragraphWithIframe iframe {
+    margin: 20px;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+/* slide styling */
+.slider {
+    width: 600px;
+    height: 350px;
+    overflow: hidden;
+    margin: 20px auto; 
+}
+
+.slides {
+    width: 500%;
+    height: 350px;
+    display: flex;
+} 
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 600px;
+    height: 350px;
+}
+
+.navigation {
+    width: 600px;
+    margin-top: -40px;
+    margin-left: 35%;
+}
+
+.navigationBtn {
+    border: 2px solid #243148;
+    padding: 0px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigationBtn:hover{
+    background-color: #243148;
+}
+
+.navigationBtn:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -60%;
+}
+
+/* footer styling */
+footer {
+    height: 100px;
+    width: 80%;
+    margin: 50px auto 0px;
+    padding-top: 20px;
+    border-top: 1px solid #243148;
+}
+
+footer small {
+    padding-left: 900px;
+    padding-right: auto;
+}
+
+/* responsive design */
+@media only screen and (max-width: 700px) {
+    p, .paragraphWithIframe iframe {
+        margin: 5px;
+    }
+
+    .paragraphWithIframe {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider {
+        width: 400px;
+        height: 250px;
+    }
+
+    .slide img {
+        width: 400px;
+        height: 250px;
+    }
+    
+    .navigation {
+        width: 400px;
+        height: 250px;
+    }
+    
+}
+
+@media only screen and (max-width: 436px) {
+    p, .paragraphWithIframe iframe {
+        margin: 0px;
+    }
+
+    .paragraphWithIframe iframe {
+        margin: 0px;
+    }
+
+    .slider {
+        width: 300px;
+        height: 150px;
+    }
+
+    .slide img {
+        width: 300px;
+        height: 150px;
+    }
+    
+    .navigation {
+        width: 300px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 356px) {
+
+    .slider {
+        width: 200px;
+        height: 100px;
+    }
+
+    .slide img {
+        width: 200px;
+        height: 100px;
+    }
+    
+    .navigation {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

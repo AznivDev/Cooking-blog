@@ -1,0 +1,104 @@
+@import "../mixins.scss";
+ 
+.login {
+    @include center-content;
+    background-color: $mainColor;
+    height: 100vh;
+    .loginContainer {
+        @include center-content;
+        height: 422px;
+        position: cover;
+        .loginImg {
+            height: 100%;
+            position: cover;  
+        }
+        @media screen and (max-width: 1040px) {
+            img {
+                display: none;
+            }
+        } 
+        .loginCard{ 
+            height: 100%;
+            width: 350px;
+            @include columnCenter;
+            background-color: #fAEfff;
+            gap: 8px;
+            outline: none;
+            border: 1px solid $accent-color;
+            box-shadow: 1px 1px 2px 1px $accent-color;
+             
+            @media screen and (max-width: 430px) {
+                width: 310px;
+                height: 420px;
+            }
+            @media screen and (max-width: 340px) {
+                width: 280px;
+            }
+            &:hover {
+                outline: none;
+                border: 1px solid $accent-color;
+                box-shadow: 1px 1px 2px 1px $accent-color;
+            }
+            .loginTitle {
+                color: $textsColor;
+                font-size: 45px;
+                font-family: sans-serif;
+                padding: 0px;
+                margin: 0px auto 15px;
+                @media screen and (max-width: 340px) {
+                    font-size: 35px;
+                }
+            }
+            .loginFilds {
+                height: 45px;
+                width: 80%;
+                padding: 5px;
+                outline: none;
+                border: 1px solid $accent-color;
+                box-shadow: 1px 1px 2px 1px $accent-color;
+                border-radius: 4px;
+                outline: none;
+                transition: transform .9s;
+                &:hover {
+                    border: 1px solid $accent-color;
+                    box-shadow: 1px 1px 2px 1px $accent-color;
+                    transform: scale(1.4);
+                    transition: transform .9s;
+                }  
+            }
+            .loginBtn {
+                @include btn;
+                color: $dark-color;
+                background-color: $light-color;
+                &:hover {
+                    background-color: $textsColor;
+                    color: $light-color;
+                }
+            } 
+            .errorText {
+                width: 100%;
+                height: 8px;
+                margin-bottom: 3px;
+                color: red;
+                font-size: 14px;
+                text-align: center;
+            }
+            .registerComponent  {
+                @include columnCenter;
+                gap: 5px;
+                height: 80px;
+                border-top: 1px solid $middle-color;
+                color: $textsColor;
+                font-size: 12px;
+                padding: 3px 50px 0px;
+            }
+            .registerBtn {
+                @include btn;
+                width: 120px;
+                text-align: center;
+                vertical-align: middle;
+            }
+        }     
+     }
+}
+

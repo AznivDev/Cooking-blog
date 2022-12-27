@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#info {
+   height: 500px;
+   font-size: 18px;
+}
+#contaner {
+   height: 300px;
+   font-size: 18px;
+}

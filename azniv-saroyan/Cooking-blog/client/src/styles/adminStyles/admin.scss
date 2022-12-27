@@ -1,0 +1,128 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    .adminDashboard {
+        @include columnCenter;
+        width: 100%;
+        gap: 15px;
+        margin: 0px;
+        padding: 40px 0px;
+        background-color: $mainColor;
+        .adminTitle {
+            @include titleStyle;
+            text-align: center;
+        }
+        .adminContainer {
+            width: 100%;
+            @include columnCenter;
+            gap: 20px;
+            .postTitle, .postLink {
+                height: 50px;
+                width: 60%;
+                border-radius: 8px;
+                outline: none;
+                padding: 10px;
+                border: 1px solid $mainColor;
+                color: $textsColor;
+                font-size: 18px;
+                transition-duration: 1s;
+                &:hover {
+                    border: 1px solid $accent-color;
+                    transition-duration: 1s;
+                }
+                @media screen and (max-width: 1249px){
+                    width: 60%; 
+                }
+                @media screen and (max-width: 1021px){
+                    width: 70%; 
+                }
+                @media screen and (max-width: 789px){
+                    width: 80%; 
+                    height: 40px;
+                    font-size: 16px;
+                }
+                @media screen and (max-width: 590px){
+                    width: 90%; 
+                    font-size: 16px;
+                }
+                @media screen and (max-width: 415px){
+                    font-size: 14px;
+                }
+            }
+            .postContent{
+                // height: auto;
+                min-height: 300px;
+                width: 60%;
+                padding: 10px;
+                border-radius: 8px;
+                outline: none;
+                color: $textsColor;
+                background-color: #fff;
+                font-size: 18px;
+                @media screen and (max-width: 1249px){
+                    width: 60%; 
+                }
+                @media screen and (max-width: 1021px){
+                    width: 70%; 
+                }
+                @media screen and (max-width: 789px){
+                    width: 80%;
+                    font-size: 16px; 
+                }
+                @media screen and (max-width: 590px){
+                    width: 90%; 
+                    font-size: 16px;
+                } 
+                @media screen and (max-width: 415px){
+                    width: 90%; 
+                    font-size: 14px;
+                }   
+                .ql-container {
+                    border: none;
+                    font-size: 16px;
+                    @media screen and (max-width: 450px){
+                        font-size: 14px;
+                    }
+                }    
+            }
+            .category {
+                @include columnCenter;
+                .categoryItem {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 15px;
+                    width: 200px;
+                    color: $textsColor;
+                    input, label{
+                        cursor: pointer;
+                        position: relative;
+                        opacity: 1;
+                        font-size: 25px;
+                        @media screen and (max-width: 590px){
+                            font-size: 22px;
+                        }  
+                    }
+                    input {
+                        height: 15px;
+                        width: 15px;
+                    }           
+                }  
+            }
+        }
+    } 
+    .error {
+        background-color: $mainColor;
+        width: 100%;
+        text-align: center;
+        color: red;
+        font-size: 14px;
+        height: 15px;
+    }
+    .addItem {
+        @include btn;
+    }
+}
