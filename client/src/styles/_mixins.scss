@@ -1,0 +1,57 @@
+@import "./_variables.scss";
+
+@mixin center-content {
+    background-color: $light-color;
+    @include rowCenter;
+}
+
+@mixin columnCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin rowCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin btn {
+    width: 90px;
+    height: 40px;
+    border: 1px solid inherit;
+    border-radius: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: $textsColor;
+    color: $light-color;
+    transition-duration: 1s;
+    &:hover {
+        color: $textsColor;
+        background-color: $light-color;
+        border: 1px solid $accent-color;
+        transition-duration: 1s;
+    }
+}
+
+@mixin titleStyle {
+    margin: 0px;
+    padding: 0px;
+    font-family: $fontFamilyTexts;
+    font-size: 26px;
+    color: $textsColor;
+}
+
+
+@mixin datesStyle {
+    width: 97%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;   
+    color: $textsColor;
+    font-size: $datesSizes;
+    font-family: $fontFamilyTexts;
+}
+    

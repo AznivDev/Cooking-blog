@@ -1,0 +1,65 @@
+.admin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0px;
+}
+.admin .newItem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.admin .newItem .addTitle, .admin .newItem .addLink {
+  height: 40px;
+  width: 50%;
+  border: 1px solid #964e4e;
+}
+@media screen and (max-width: 897px) {
+  .admin .newItem .addTitle, .admin .newItem .addLink {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 590px) {
+  .admin .newItem .addTitle, .admin .newItem .addLink {
+    width: 80%;
+  }
+}
+.admin .newItem .addContent {
+  height: 200px;
+  width: 50%;
+  border: 1px solid #964e4e;
+}
+@media screen and (max-width: 897px) {
+  .admin .newItem .addContent {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 590px) {
+  .admin .newItem .addContent {
+    width: 80%;
+  }
+}
+.admin .addItem {
+  width: 110px;
+  height: 35px;
+  height: 35px;
+  width: 90px;
+  height: 35px;
+  border: 1px solid #d3aeae;
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: #964e4e;
+  color: #fcf7fc;
+  transition-duration: 1s;
+}
+.admin .addItem:hover {
+  color: #964e4e;
+  background-color: #fcf7fc;
+  cursor: pointer;
+  transition-duration: 1s;
+}/*# sourceMappingURL=admin.css.map */

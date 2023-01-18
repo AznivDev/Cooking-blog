@@ -1,0 +1,23 @@
+@import "../_variables.scss";
+
+.scrollToTop {
+    position: fixed;
+    bottom: 12px;
+    left: calc(100% - 50px - 12px);
+    border-radius: 50%;
+    z-index: 11;
+    .topIcon {
+        font-size: 50px;
+        color: $textsColor;
+        cursor: pointer;
+        animation: scrollTop 1s alternate ease infinite;
+    }
+}
+@keyframes scrollTop{
+    from {
+        transform: translateY(5px);
+    }    
+    to {
+        transform: translateY(-1px);
+    }
+}

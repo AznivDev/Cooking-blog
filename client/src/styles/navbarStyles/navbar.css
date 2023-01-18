@@ -1,0 +1,78 @@
+.navbar {
+  height: 70px;
+  display: flex;
+  background-color: #d3aeae;
+}
+.navbar .logo {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  padding-left: 80px;
+  align-items: center;
+  text-decoration: none;
+}
+@media screen and (max-width: 550px) {
+  .navbar .logo {
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .navbar .logo {
+    padding-left: 10px;
+  }
+}
+.navbar .logo .logoImage {
+  height: 62px;
+  border-radius: 50px;
+}
+.navbar .logo .logoImage:hover {
+  cursor: pointer;
+}
+.navbar .navbarButtons {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+.navbar .navbarButtons .loginBtn, .navbar .navbarButtons .registrationBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+  text-decoration: none;
+  color: #fcf7fc;
+  font-size: 20px;
+  transition-duration: 2s;
+}
+.navbar .navbarButtons .loginBtn:hover, .navbar .navbarButtons .registrationBtn:hover {
+  cursor: pointer;
+  color: #964e4e;
+  transition-duration: 2s;
+}
+@media screen and (max-width: 450px) {
+  .navbar .navbarButtons .loginBtn, .navbar .navbarButtons .registrationBtn {
+    padding: 0px 6px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .navbar .navbarButtons .loginBtn, .navbar .navbarButtons .registrationBtn {
+    font-size: 18px;
+  }
+}
+.navbar .navbarButtons .registrationBtn {
+  padding-right: 120px;
+}
+@media screen and (max-width: 670px) {
+  .navbar .navbarButtons .registrationBtn {
+    padding-right: 80px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .navbar .navbarButtons .registrationBtn {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .navbar .navbarButtons .registrationBtn {
+    padding-right: 10px;
+  }
+}/*# sourceMappingURL=navbar.css.map */
