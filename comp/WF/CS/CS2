@@ -1,0 +1,462 @@
+n
+
+Accounting application that helps you calculate income tax, needs to save and print documents.
+vs.
+“Accounting” for the correct voltage through the right pin that regulates the motion mechanism for paper, for every printer model ever built
+
+Հաշվապահական հաշվառման հավելված, որն օգնում է ձեզ հաշվարկել եկամտահարկը, անհրաժեշտ է պահպանել և տպել փաստաթղթեր:
+ընդդեմ
+«հաշվառում» թղթի շարժման մեխանիզմը կարգավորող ճիշտ լարման միջոցով, երբևէ կառուցված տպիչի յուրաքանչյուր մոդելի համար։
+
+
+Accounting application asks OS to print a document for it.
+● OS passes it along to the device driver for the printer. 
+● Device driver doesn’t care about what it is printing, applications don’t care about how it is printed. 
+● OS hides the complexities of hardware from user applications
+
+Հաշվապահական հավելվածը OS-ին խնդրում է տպել փաստաթուղթ դրա համար:
+● OS-ն այն փոխանցում է տպիչի սարքի device driver-ին:
+● device driver-ին չի հետաքրքրում, թե ինչ է տպում, application-ներին չի հետաքրքրում, թե ինչպես է այն տպվում:
+● OS-ն թաքցնում է ապարատային բարդությունները user application-ներից:
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Resource Management
+
+Accounting application that helps you calculate income tax, needs to work with large amounts of data that exceed the capacity of our RAM.
+OS overcomes this limitation by storing RAM content in the HDD, and loading them back into the RAM when needed. All of this still “feels”
+like RAM from the program’s point of view.
+
+Հաշվապահական հավելված, որն օգնում է ձեզ հաշվարկել եկամտահարկը, պետք է աշխատի մեծ քանակությամբ տվյալների հետ, որոնք գերազանցում են մեր 
+RAM-ի հզորությունը: OS-ն հաղթահարում է այս սահմանափակումը՝ պահելով RAM-ի բովանդակությունը HDD-ում և անհրաժեշտության դեպքում դրանք նորից
+բեռնելով RAM-ում: Ծրագրի տեսանկյունից այս ամենը դեռ «զգում» է RAM-ի նման:
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Multitasking
+Each CPU core can run a single task at any given time.
+Contemporary operating systems implement scheduling schemes that ensure all processes (a running program is called a process) get their 
+share of CPU time, and achieve an “illusion” of concurrency.
+Example: Listening to music as you work, while your memory resident anti-virus software protects your computer from malware attacks
+
+Multitasking
+Յուրաքանչյուր CPU միջուկը ցանկացած պահի կարող է կատարել մեկ առաջադրանք:
+Ժամանակակից օպերացիոն համակարգերն իրականացնում են պլանավորման սխեմաներ, որոնք ապահովում են, որ բոլոր պրոցեսները (գործող ծրագիրը կոչվում է 
+գործընթաց) ստանան պրոցեսորի ժամանակի իրենց բաժինը և հասնում են միաժամանակության «պատրանքի»:
+Օրինակ. Աշխատանքի ընթացքում երաժշտություն լսելը, մինչդեռ ձեր հիշողության ռեզիդենտ հակավիրուսային ծրագիրը պաշտպանում է ձեր համակարգիչը չարամիտ
+ծրագրերի հարձակումներից:
+
+Multitasking - Multithreading
+Each process may have more than one thread of execution and run “simultaneous” tasks within themselves. This is referred to as multithreading.
+Multithreaded programs may also utilize multiple CPU cores.
+Example: User interfaces that respond to clicks and other interactions while an intensive task is being performed
+
+
+Multitasking – Բազմաթելային
+Յուրաքանչյուր պրոցես կարող է ունենալ մեկից ավելի կատարման թեմա և իրականացնել «միաժամանակյա» առաջադրանքներ իրենց ներսում: Սա կոչվում է բազմաթելային:
+Multitasking ծրագրերը կարող են նաև օգտագործել բազմաթիվ CPU cores:
+Օրինակ. User interfaces, որոնք արձագանքում են clicks և այլ փոխազդեցություններին, երբ կատարվում է ինտենսիվ առաջադրանք
+
+Multitasking - Multi-core CPU
+Running independent jobs on multiple CPU cores enhances the performance significantly. There are limits on how fast and small a CPU core can get, 
+due to production costs and physical phenomena, such as quantum tunneling. (Vertical scaling) Adding CPU cores along with design solutions for 
+division of labour, partially alleviates the situation. (Horizontal scaling)
+
+Multitasking - բազմամիջուկ պրոցեսոր
+Մի քանի CPU վրա անկախ աշխատանքներ կատարելը զգալիորեն բարձրացնում է կատարումը: Կան սահմանափակումներ, թե որքան արագ և քիչ կարող է 
+ստանալ CPU-ն՝ պայմանավորված արտադրության ծախսերով և ֆիզիկական երևույթներով, ինչպիսիք են քվանտային թունելավորումը: (Ուղղահայաց մասշտաբավորում) 
+Աշխատանքի բաշխման համար պրոցեսորի միջուկների ավելացումը նախագծային լուծումների հետ միասին մասամբ մեղմացնում է իրավիճակը: (Հորիզոնական մասշտաբավորում)
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Virtual Memory
+Resource management becomes even more important with multiple processes running simultaneously.
+OS allocates resources, such as RAM, to processes, prevents them from interfering with one another.
+Processes are under the impression that they are the only one running on the system, and are unaware of how actual physical memory is being 
+distributed among them. (Virtual memory)
+
+Վիրտուալ հիշողություն
+Ռեսուրսների կառավարումն ավելի կարևոր է դառնում միաժամանակ մի քանի գործընթացների դեպքում:
+ՕՀ-ն պրոցեսներին հատկացնում է ռեսուրսներ, ինչպիսին է RAM-ը, թույլ չի տալիս դրանք միմյանց խանգարել:
+Գործընթացների վրա այնպիսի տպավորություն է ստեղծվում, որ նրանք միակն են, որոնք աշխատում են համակարգում և տեղյակ չեն, թե ինչպես է իրական 
+ֆիզիկական հիշողությունը բաշխվում իրենց միջև: (Վիրտուալ հիշողություն)
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Security
+Especially important in multi-user environments.
+OS enforces policies regarding their rights and privileges. Certain users may not run administrator utilities, change sensitive system 
+settings, see or modify files that belong to others, etc.
+
+Անվտանգություն
+Հատկապես կարևոր է բազմաֆունկցիոնալ միջավայրում:
+ՕՀ-ն իրականացնում է քաղաքականություն՝ կապված իրենց իրավունքների և արտոնությունների հետ: Որոշ օգտատերեր չեն կարող գործարկել ադմինիստրատորի
+ծրագրերը, փոխել համակարգի զգայուն կարգավորումները, տեսնել կամ փոփոխել այլոց պատկանող ֆայլերը և այլն:
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+User Interface
+● Command Line Interface (CLI) where users type commands. (MS-DOS)
+● Graphical User Interface (GUI, also pronounced like gooey) where users are guided by visual cues interact with intuitive shapes using 
+keyboards and later on, mice. More recent ones come with layers of “windows” stacked on top of one another. (Norton Commander, Windows)
+
+Օգտագործողի ինտերֆեյս
+● Command Line Interface (CLI), որտեղ օգտվողները մուտքագրում են հրամաններ: (MS-DOS)
+● Օգտագործողի գրաֆիկական ինտերֆեյս (GUI, որը նաև արտասանվում է որպես gooey), որտեղ օգտատերերը առաջնորդվում են տեսողական ազդանշաններով, 
+փոխազդում են ինտուիտիվ ձևերի հետ՝ օգտագործելով ստեղնաշարերը, իսկ ավելի ուշ՝ մկները: Ավելի վերջերս գալիս են միմյանց վրա դրված 
+«պատուհանների» շերտերով: (Norton Commander, Windows)
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Interrupts
+Interrupts are signals regarding events that require attention. They interrupt the job that CPU was working on so, they can be handled
+(by kernel or firmware).
+● Hardware interrupts are caused by hardware events, such as a key being pressed by the user.
+● Software interrupts are caused by programs making system calls or certain errors. In essence, it’s a value that is set in a register.
+
+Ընդհատում է
+Interrupt֊ները signals են այն իրադարձությունների վերաբերյալ, որոնք ուշադրություն են պահանջում: Նրանք ընդհատում են այն աշխատանքը, 
+որի վրա աշխատում էր պրոցեսորը, ուստի դրանք կարող են կարգավորվել (kernel կամ որոնվածի (firmware) միջոցով:
+● Սարքավորումների ընդհատումները պայմանավորված են ապարատային(hardware)  իրադարձություններով, օրինակ՝ օգտատիրոջ կողմից ստեղնի սեղմումով:
+● Ծրագրաշարի (Software) ընդհատումները պայմանավորված են system calls կատարող ծրագրերով կամ որոշակի սխալներով: Ըստ էության, դա արժեք է, 
+որը սահմանված է register:
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+File System
+Is the way files are organized and stored on a disk. Affects the maximum size of files and partitions, file name lengths, etc.
+Examples:
+● FAT (File allocation table) MS-DOS default
+● FAT32 Used by Win95
+● NTFS (NT file system) Used by WindowsNT and later on by other versions
+● ext4 Used by most Linux distros
+
+Ֆայլային համակարգ
+Ուղի է, որով ֆայլերը կազմակերպվում և պահվում են սկավառակի վրա: Ազդում է ֆայլերի չափի, ֆայլի անվան 
+երկարության և այլնի վրա:
+Օրինակներ.
+● FAT (Ֆայլերի տեղաբաշխման աղյուսակ) MS-DOS default
+● FAT32 Օգտագործվում է Win95-ի կողմից
+● NTFS (NT ֆայլային համակարգ) Օգտագործվում է WindowsNT-ի և հետագայում այլ տարբերակների կողմից
+● ext4 Օգտագործվում է Linux-ի մեծ մասի կողմից
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Booting
+1. Mainboard firmware starts running when the computer is powered on.
+2. Power-on self test (POST) is performed. Success results in a motherboard beep.
+3. Master Boot Record (MBR, UEFI on newer systems) is loaded, and starts to run, starts a secondary loader such as LILO(Linux Loader) or GRUB.
+4. That bootloader then loads the kernel.
+5. Kernel takes control and launches the shell.
+
+Booting
+1. Mainboard որոնվածը սկսում է աշխատել, երբ համակարգիչը միացված է:
+2. Կատարվում է միացման ինքնաթեստ (POST): Հաջողության արդյունքը մայր տախտակի ազդանշան է:
+3. Հիմնական Boot Record-ը (MBR, UEFI նոր համակարգերում) բեռնված է և սկսում է աշխատել, գործարկում է երկրորդական բեռնիչը, ինչպիսին է LILO (Linux Loader
+) կամ GRUB-ը:
+4. Այնուհետև այդ բեռնիչը բեռնում է միջուկը:
+5. Kernel-ը վերցնում է վերահսկողությունը և գործարկում է shell֊ը:
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Terminology
+● ROM (Read-only memory) is a chip where firmware is stored. Recent motherboards use flash memory and their firmware can be updated.
+● BIOS (Basic input output system)
+● CMOS (Complementary metal–oxide–semiconductor, pronounced "see-moss") For storing date/time, boot priorities, various settings. 
+Powered by a battery.
+
+Terminals (and terminal emulators) provide the user with a command line interface (CLI) to interact with the shell, namely Bash.
+
+Տերմինաբանություն
+● ROM-ը (միայն կարդալու հիշողություն) չիպ է, որտեղ պահվում է որոնվածը: Վերջին motherboards օգտագործում են ֆլեշ հիշողություն,
+և դրանց որոնվածը կարող է թարմացվել:
+● BIOS (Հիմնական մուտքային ելքային համակարգ)
+● CMOS (Կոմպլեմենտար մետաղ-օքսիդ-կիսահաղորդիչ, արտասանվում է «տես-մամուռ») ամսաթիվը/ժամը, բեռնման առաջնահերթությունները, տարբեր 
+կարգավորումները պահելու համար: սնուցվում է մարտկոցով:
+
+Terminals (and terminal emulators) provide the user with a command line interface (CLI) to interact with the shell, namely Bash.
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Bash
+The general format of the commands is as follows:
+command -- Options input1 input2...
+By default, the command with the --help option displays a short guide describing its usage and input parameters.
+Similarly, the --version options always display the version information of the command. man somecommand, on the other hand, 
+displays a detailed manual for the command.
+
+Բաշ
+Հրամանների ընդհանուր ձևաչափը հետևյալն է.
+հրաման - Ընտրանքներ input1 input2...
+Լռելյայնորեն, --help տարբերակով հրամանը ցուցադրում է կարճ ուղեցույց, որը նկարագրում է դրա օգտագործման և մուտքագրման 
+պարամետրերը:
+Նմանապես, --version ընտրանքները միշտ ցուցադրում են հրամանի տարբերակի տեղեկատվությունը: man somecommand-ը, մյուս կողմից, 
+ցուցադրում է հրամանի մանրամասն ձեռնարկ:
+
+
+Bash
+Printing the contents of the PATH environment variable. If a command is issued and is not present in the indicated 
+directory, these locations are checked next.
+Any command present in these directories can be invoked from anywhere.
+
+Bash commands can be written in bulk in a text file, and run at once. Particularly useful for automating repetitive 
+jobs, possibly for a lot of computers.
+
+
+Բաշ
+PATH միջավայրի փոփոխականի բովանդակության տպում: Եթե ​​հրաման է տրված և նշված գրացուցակում չկա, ապա այս վայրերը 
+ստուգվում են հաջորդիվ:
+Այս գրացուցակներում առկա ցանկացած հրաման կարող է կանչվել ցանկացած վայրից:
+
+Bash հրամանները կարող են զանգվածաբար գրվել տեքստային ֆայլում և գործարկել միանգամից: Հատկապես օգտակար է կրկնվող 
+աշխատանքների ավտոմատացման համար, հնարավոր է շատ համակարգիչների համար:
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+
+“Compiler, Computer software that translates (compiles) source code written in a high-level language (e.g., C++)
+ into a set of machine-language instructions that can be understood by a digital computer’s CPU.”
+ 
+ «Կոմպիլյատոր, համակարգչային ծրագրակազմ, որը թարգմանում է (կազմում) աղբյուրի կոդը, որը գրված է բարձր մակարդակի
+  լեզվով (օրինակ՝ C++) մեքենալեզու հրահանգների մի շարքի, որոնք կարող են հասկանալի լինել թվային համակարգչի պրոցեսորով»:
+  
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Interpreter
+Interpreters translate given source code to machine code at runtime and therefore must be present on the target 
+machine. It is often said that languages like Python or Javascript are interpreted
+anguages, but technically there is nothing inherent about the languages that make them interpreted or compiled. 
+e.g. nothing prevents anyone to create a Python compiler or a C++ interpreter.
+ 
+ Թարգմանիչ
+Թարգմանիչները գործարկման ժամանակ թարգմանում են տվյալ աղբյուրի կոդը մեքենայի կոդ և հետևաբար պետք է ներկա լինեն
+թիրախային մեքենայի վրա: Հաճախ ասում են, որ Python-ի կամ Javascript-ի նման լեզուները մեկնաբանվում են
+լեզուները, բայց տեխնիկապես ոչ մի բնորոշ բան չկա այն լեզուների մասին, որոնք ստիպում են դրանք մեկնաբանել կամ 
+կազմել: օր. ոչինչ չի խանգարում որևէ մեկին ստեղծել Python կոմպիլյատոր կամ C++ թարգմանիչ:
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Compiled Code
+● Difficult to reverse engineer 
+● Needs to be compiled for every platform 
+● Faster / Larger files
+
+
+ Interpreted Code
+● Needs an interpreter during runtime
+● Smaller file sizes / Slower
+● Easy to modify
+
+
+Կազմված օրենսգիրք
+● Դժվար է հակադարձ ճարտարագետը
+● Պետք է կազմվի յուրաքանչյուր հարթակի համար
+● Ավելի արագ / ավելի մեծ ֆայլեր
+
+
+ Մեկնաբանված օրենսգիրք
+● Գործարկման ընթացքում թարգմանչի կարիք ունի
+● Ավելի փոքր ֆայլի չափեր / Ավելի դանդաղ
+● Հեշտ է փոփոխել
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Virtual Machines
+A virtual machine is a computer that is emulated by software. Their uses include:
+● Running and testing operating systems
+● Server virtualization and load distribution
+● Malware analysis
+It should be noted that Java Virtual Machine is a specification and actual JRE 
+implementations might not contain an actual virtual machine. (JIT compilation)
+
+Վիրտուալ մեքենաներ
+Վիրտուալ մեքենան համակարգիչ է, որը նմանակվում է ծրագրային ապահովման միջոցով: 
+Նրանց օգտագործումը ներառում է.
+● Օպերացիոն համակարգերի գործարկում և փորձարկում
+● Սերվերի վիրտուալացում և բեռների բաշխում
+● Չարամիտ ծրագրերի վերլուծություն
+Հարկ է նշել, որ Java վիրտուալ մեքենան հստակեցում է, և իրական JRE իրականացումները
+կարող են չպարունակել իրական վիրտուալ մեքենա: (JIT հավաքածու)
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Networks
+“Computer networking refers to connected computing devices (such as laptops,
+desktops, servers, smartphones, and tablets) and an ever-expanding array of IoT 
+devices (such as cameras, door locks, doorbells, refrigerators, audio/visual systems, 
+thermostats, and various sensors) that communicate with one another.” (Cisco, 2021)
+These communications are facilitated by various protocols.
+TCP/IP is the protocol suite on which the Internet relies.
+
+Ցանցեր
+«Համակարգչային ցանցը վերաբերում է միացված հաշվողական սարքերին (օրինակ՝ նոութբուքեր,
+ desktops, սերվերներ, սմարթֆոններ և պլանշետներ) և IoT սարքերի անընդհատ 
+ ընդլայնվող զանգվածին (օրինակ՝ տեսախցիկներ, դռների կողպեքներ, դռան զանգեր, սառնարաններ, 
+ աուդիո/վիզուալ համակարգեր, թերմոստատներ, և տարբեր սենսորներ), որոնք շփվում են միմյանց 
+ հետ»։ (Cisco, 2021)
+Այս հաղորդակցությունները հեշտացվում են տարբեր արձանագրություններով:
+TCP/IP-ն այն պրոտոկոլային փաթեթն է, որի վրա հիմնված է ինտերնետը:
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+An email application does not concern itself with:
+● Whether it is connected to the internet via WiFi, cellular data or satellite
+● What routes the communication passes through
+
+
+Էլփոստի դիմումն իրեն չի վերաբերում.
+● Անկախ նրանից, թե այն միացված է ինտերնետին WiFi-ի, բջջային տվյալների կամ արբանյակի միջոցով
+● Ինչ ուղիներով է անցնում հաղորդակցությունը
+
+Application layer protocols are about how processes communicate with one another, remotely.
+Կիրառական շերտի արձանագրությունները վերաբերում են այն մասին, թե ինչպես են գործընթացները հեռակա կարգով հաղորդակցվում միմյանց հետ:
+
+
+TCP (Transmission Control Protocol)
+Rearranges sent packets in the correct order at thedestination.
+Sends confirmation to the sender.
+
+TCP (Transmission Control Protocol)
+Վերադասավորում է ուղարկված փաթեթները ճիշտ հերթականությամբ նպատակակետում:
+Ուղարկողին հաստատում է ուղարկում 
+
+
+UDP (User Datagram Protocol)
+Is less “pedantic” than TCP. Used for loss-tolerant
+connections where speed is more important than
+reliability.
+
+UDP (User Datagram Protocol) ավելի քիչ «պեդանտական» է, քան TCP-ն: Օգտագործվում է
+կորստի դիմացկուն միացումների համար, որտեղ արագությունն ավելի կարևոր է,
+քան հուսալիությունը:
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+IPv4 is the most common. 32bit addresses
+IPv6 is 128 bits
+
+IPv4-ը ամենատարածվածն է: 32 բիթ հասցեներ
+IPv6-ը 128 բիթ է
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Open Systems Interconnection Model (OSI)
+The OSI model is a conceptual model that classifies protocols.
+Lower levels are closer to the hardware
+
+Application
+Presentation
+Session
+Transport
+Network
+Data Link
+Physical
+
+Բաց համակարգերի փոխկապակցման մոդել (OSI)
+OSI մոդելը կոնցեպտուալ մոդել է, որը դասակարգում է protocols:
+Ստորին մակարդակները ավելի մոտ են hardwer-in
+Դիմում
+Ներկայացում
+Նիստ
+Տրանսպորտ
+Ցանց
+Տվյալների հղում
+Ֆիզիկական
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Domain Name Service (DNS)
+“DNS, in full domain name system, network service that converts between World Wide Web
+ “name” addresses and numeric Internet addresses.”
+“The basic form of this structure is the name of a machine, followed by a top level 
+domain (TLD), separated by dots (periods).”
+
+Domain Name Service (DNS)
+«DNS, network֊ի ծառայություն, որը 
+World Wide Web հասցեները փոխում է թվային ինտերնետային հասցեների»:
+«Այս կառուցվածքի հիմնական ձևը մեքենայի անվանումն է, որին հաջորդում է վերին մակարդակի 
+domain (TLD), որն առանձնացված է կետերով (ժամանակահատվածներով):
+
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Hypertext Transfer Protocol (http)
+“HTTP, in full HyperText Transfer Protocol, standard application-level protocol used 
+for exchanging files on the World Wide Web. HTTP runs on top of the TCP/IP protocol. 
+Web browsers are HTTP clients that send file requests to Web servers, which in turn 
+handle the requests via an HTTP service.
+
+Հիպերտեքստի փոխանցման Protocol (http)
+«HTTP, ամբողջական HyperText Transfer Protocol, ստանդարտ application-level protocol,
+որն օգտագործվում է համաշխարհային ցանցում ֆայլերի փոխանակման համար: HTTP-ն աշխատում է TCP/IP
+protocol վերևում: Վեբ բրաուզերները HTTP հաճախորդներ են, որոնք ֆայլերի հարցումներ են 
+ուղարկում վեբ սերվերներին, որոնք իրենց հերթին կատարում են հարցումները HTTP ծառայության միջոցով:
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Uniform Resource Locator (URL)
+“URL, in full Uniform Resource Locator, address of a resource on the Internet, or of a file 
+stored locally. The resource can be any type of file stored on a server, such as a Web page, 
+a text file, a graphics file, or an application program. The address contains three elements: 
+the type of protocol used to access the file (e.g., HTTP for a Web page, ftp for an FTP site); 
+the domain name or IP address of the server where the file resides; and, optionally, 
+the pathname to the file (i.e., description of the file’s location). “
+
+Uniform Resource Locator (URL)
+«URL, ամբողջական Uniform Resource Locator-ով, ինտերնետում գտնվող ռեսուրսի կամ locally պահվող 
+ֆայլի հասցե: Ռեսուրսը կարող է լինել սերվերում պահվող ցանկացած տեսակի ֆայլ, օրինակ՝ վեբ էջ, 
+տեքստային ֆայլ, գրաֆիկական ֆայլ կամ կիրառական ծրագիր: Հասցեն պարունակում է երեք տարր՝ ֆայլ 
+մուտք գործելու համար օգտագործվող protocol-ի տեսակը (օրինակ՝ HTTP վեբ էջի համար, ftp՝ FTP 
+կայքի համար); սերվերի տիրույթի անունը կամ IP հասցեն, որտեղ գտնվում է ֆայլը. և, ըստ ցանկության, 
+ֆայլի ուղու անունը (այսինքն՝ ֆայլի գտնվելու վայրի նկարագրությունը): «
+
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Relative and Absolute Paths
+● Absolute paths are in relation to the host system or the network.
+C:\Windows\system32.dll
+● Relative paths are given with relation to the active directory.
+A program can access a photo located in the same folder as itself.
+./background.jpg
+● Dot (.) indicates “here”, two dots (..) indicate parent directory.
+● Windows paths denote directories with backslash \ whereas in UNIX based systems
+ and the Internet, forward slash / is used.
+
+
+Relative and Absolute Paths
+● Absolute Paths ցույց է տալիս Paths սկսած host system֊ից կամ network֊ից:
+C:\Windows\system32.dll
+● Relative Paths ցույց է տալիս Paths active directory֊ից սկսած:
+Ծրագիրը կարող է մուտք գործել լուսանկար, որը գտնվում է նույն թղթապանակում, ինչ ինքը:
+./background.jpg
+● Կետը (.) ցույց է տալիս «այստեղ», երկու կետը (..) ցույց է տալիս ծնող directory:
+● Windows-ի directories ուղիները նշում են հետին կտրվածքով \ մինչդեռ UNIX-ի 
+վրա հիմնված համակարգերում և ինտերնետում օգտագործվում է առաջ կտրվածք /:
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊֊
+
+Internet Topology
+● There are programs that map the topology of networks.
+One such program is traceroute and displays every node between two hosts.
+● Physical map of underwater cables
+https://www.submarinecablemap.com/
+
+Ինտերնետ տոպոլոգիա
+● Կան ծրագրեր, որոնք քարտեզագրում են ցանցերի տոպոլոգիան։
+Նման ծրագրերից մեկը traceroute-ն է և ցուցադրում է յուրաքանչյուր հանգույց երկու հոսթների միջև:
+● Ստորջրյա մալուխների ֆիզիկական քարտեզ
+https://www.submarinecablemap.com/

@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+#wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    gap: 20px;
+}
+#textItemsContainer, #languagesContainer {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#textForTranslate, #translatedItem {
+    padding: 10px;
+    outline: none;
+}
+#languagesContainer {
+   display: flex;
+}
+#languagesContainerfrom, #languagesContainerTo {
+    width: 30%;
+}
+#translateButton, select {
+    height: 30px;
+    outline: none;
+}
+#translateButton {
+    padding: 3px;
+    border-radius: 4px;
+    background-color: #000;
+    color: #f1f1f1;    
+}

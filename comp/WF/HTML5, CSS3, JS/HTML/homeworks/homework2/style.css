@@ -1,0 +1,44 @@
+* {
+    margin: 0px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.phone {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid gray;
+}
+
+.phone h1 {
+    margin: 5px 0px;
+}
+
+progress {
+    accent-color: #0E7C10;
+}
+
+.first-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.gender-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    width: 150px;
+}
+
+button {
+    width: 100px;
+    margin: 5px;
+    margin-top: 40px;
+}
+
+img{
+    width: 500px;
+}
