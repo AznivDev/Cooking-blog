@@ -1,4 +1,0 @@
-Modify your previous script that it additionally takes one random word as an 
-argument. Loop over the file and print out only the lines that contain the given
- word. You cannot use grep for this. Your script should be named solution-a2.2.sh, 
- the given word has to be the first argument and the input file

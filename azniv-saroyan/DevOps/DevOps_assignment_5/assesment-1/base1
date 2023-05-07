@@ -1,1 +1,0 @@
-Using Bash flow control methods, modify the script to trap if a user hits Ctrl+C to cancel the script and remove all backed up files if that happens. Additionally, add logic to determine if no parameters are passed to the script. If there were no parameters passed, print a help statement instead of attempting to run the script.

@@ -1,1 +1,0 @@
-create index idIndex on cars.user(id);
